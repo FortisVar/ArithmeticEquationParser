@@ -84,7 +84,7 @@ public:
         return Front == nullptr;
     }
     void push_front(const DataType& Data) {
-        DLNode<DataType>* newDLNode = new DLNode(Data);
+        DLNode<DataType>* newDLNode = new DLNode<DataType>(Data);
         newDLNode->Next() = Front;
         if(empty()) {
             Back = newDLNode;
@@ -94,7 +94,7 @@ public:
         Front = newDLNode;
     }
     void push_back(const DataType& Data) {
-        DLNode<DataType>* newDLNode = new DLNode(Data);
+        DLNode<DataType>* newDLNode = new DLNode<DataType>(Data);
         newDLNode->Prev() = Back;
         if(empty()) {
             Front = newDLNode;
